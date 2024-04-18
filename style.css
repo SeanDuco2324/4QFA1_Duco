@@ -1,0 +1,23 @@
+*{
+    margin:0;
+}
+
+
+#login{
+    background-color: green;
+    text-align:center;
+    color:yellow;
+   
+}
+
+
+legend{
+    color:rgb(152, 184, 11)
+}
+
+.error {
+    font-size: 11px;
+    margin: 0;
+    padding: 0;
+    color: red;
+}

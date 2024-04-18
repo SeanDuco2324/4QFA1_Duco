@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    
+    <form id="login">
+        <fieldset form="login">
+            <legend>Free Money Log-in</legend>
+            
+            <label for="name" id="namebox">Name: </label>
+            <input type="text" id="name" name="name" onblur="checkName()">
+             <p id="nameError" class="error"></p><br><br>
+            <label for="username" id="unamebox">Preferred Username: </label>
+            <input type="text" id="username" name="username" onblur="checkUser()">
+            <p id="unameError" class="error"></p><br><br>
+            <label for="password" id="passwordbox">Password: </label>
+            <input type="password" id="password" name="password" onblur="checkPassword()">
+            <p id="passwordError" class="error"></p> <br><br>
+            <label for="email" id="emailbox">Email: </label>
+            <input type="email" id="email" name="email" onblur="checkEmail()">
+            <p id="emailError" class="error"></p><br><br>
+            <label for="address" id="addressbox">Address: </label>
+            <input type="text" id="address" name="address" onblur="checkAddress()">
+            <p id="addressError" class="error"></p><br><br>
+            <label for="interests" id="interestbox">Interests: </label>
+            <textarea id="interests"  rows="5" cols="55" onblur="checkInterests()"> </textarea>
+            <p id="interestError" class="error"></p><br><br>
+            <input type="submit" id="submit" value="Submit"></input>
+            <input type="reset" value="Reset"></input></br></br>
+            <label for="gender">What is your gender?</label></br>
+            <select name="Gender" id="gender"></br>
+                <option value="male" id="male">Male</option>
+                <option value="female" id="female">Female</option>
+                <option value="nomention" id="nosay">Prefer not to mention</option><br> <br>
+        </fieldset>
+    </form>
+
+  <div id="display">
+    <div class="output" id="nameDisplay">Name: </div>
+    <div class="output" id="unameDisplay">Preferred Username: </div>
+    <div class="output" id="passwordDisplay">Password: </div>
+    <div class="output" id="emailDisplay">Email: </div>
+    <div class="output" id="addressDisplay">Address: </div>
+    <div class="output" id="interestDisplay">Interests: </div>
+
+  </div>
+  
+    <script>
+        function checkName(){
+            var check=document.getElementById("name").value;
+
+            if(check==""){
+                document.getElementById("name").style.borderColor="red";
+                document.getElementById("namebox").style.color="red";
+                document.getElementById("nameError").innerHTML="This is a required question, please fill in the field."
+            }
+
+            else{
+                document.getElementById("name").style.borderColor="green";
+            }
+        }
+
+        function checkUser(){
+            var check=document.getElementById("username").value;
+
+            if(check==""){
+                document.getElementById("username").style.borderColor="red";
+                document.getElementById("unamebox").style.color="red";
+                document.getElementById("unameError").innerHTML="This is a required question, please fill in the field."
+            }
+
+            else{
+                document.getElementById("username").style.borderColor="green";
+            }
+        }
+
+        function checkPassword(){
+            var check=document.getElementById("password").value;
+
+            if(check==""){
+                document.getElementById("password").style.borderColor="red";
+                document.getElementById("passwordbox").style.color="red";
+                document.getElementById("passwordError").innerHTML="This is a required question, please fill in the field."
+            }
+
+            else{
+                document.getElementById("password").style.borderColor="green";
+            }
+        }
+        
+        function checkEmail(){
+            var check=document.getElementById("email").value;
+
+            if(check==""){
+                document.getElementById("email").style.borderColor="red";
+                document.getElementById("emailbox").style.color="red";
+                document.getElementById("emailError").innerHTML="This is a required question, please fill in the field."
+            }
+
+            else{
+                document.getElementById("email").style.borderColor="green";
+            }
+        }
+
+        function checkAddress(){
+            var check=document.getElementById("address").value;
+
+            if(check==""){
+                document.getElementById("address").style.borderColor="red";
+                document.getElementById("addressbox").style.color="red";
+                document.getElementById("addressError").innerHTML="This is a required question, please fill in the field."
+            }
+
+            else{
+                document.getElementById("address").style.borderColor="green";
+            }
+        }
+        
+        function checkInterests(){
+            var check=document.getElementById("interests").value;
+
+            if(check==""){
+                document.getElementById("interests").style.borderColor="red";
+                document.getElementById("interestbox").style.color="red";
+                document.getElementById("interestError").innerHTML="This is a required question, please fill in the field."
+            }
+
+            else{
+                document.getElementById("interests").style.borderColor="green";
+            }
+
+        }
+
+    
+
+    function outputAnswers(){
+    name = document.getElementById("name").value;
+    username = document.getElementById("username").value;
+    password = document.getElementById("password").value;
+    email = document.getElementById("email").value;
+    address = document.getElementById("address").value;
+    interests = document.getElementById("interests").value;
+
+    document.getElementById("nameDisplay").innerHTML = "Name: " + name;
+    document.getElementById("unameDisplay").innerHTML = "Preferred Username: " + username;
+    document.getElementById("passwordDisplay").innerHTML = "Password: " + password;
+    document.getElementById("emailDisplay").innerHTML = "Email: " + email;
+    document.getElementById("addressDisplay").innerHTML = "Address: " + address;
+    document.getElementById("interestDisplay").innerHTML = "Interests: " + interests;  
+    }
+</script>
+
+    
+
+
+   
+    
+
+
+
+
+</body>
+</html>
